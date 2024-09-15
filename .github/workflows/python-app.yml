@@ -1,13 +1,9 @@
 name: Run Python Project
 
-# Define os gatilhos
 on:
-  # Gatilho para execução manual
   workflow_dispatch:
-  
-  # Gatilho para execução periódica ás 03:00
   schedule:
-    - cron: "0 3 * * *" 
+    - cron: "0 3 * * *"
 
 jobs:
   build:
@@ -22,6 +18,13 @@ jobs:
     - name: Build Docker image
       run: docker build -t my-python-app .
 
-    # Executa o contêiner com o script Python
+    # Executa o contêiner com o script Python que gera o arquivo Parquet
     - name: Run Python script in Docker container
       run: docker run my-python-app
+
+    # Salva o arquivo Parquet gerado como artifact
+    - name: Upload Parquet file
+      uses: actions/upload-artifact@v3
+      with:
+        name: parquet-file  # Nome do artifact
+        path: ./*.parquet  # Caminho do arquivo Parquet gerado
