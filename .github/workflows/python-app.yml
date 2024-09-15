@@ -27,4 +27,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: parquet-file  # Nome do artifact
-        path: ./*.parquet  # Caminho do arquivo Parquet gerado
+        path: "*_openaq_data*.parquet"  # Caminho do arquivo Parquet gerado
