@@ -104,7 +104,7 @@ def get_latests():
         out_df = process_json_list(filtered_data)
         #print(out_df.head())
         #out_df.to_csv('meu_dataset.csv', index=False, encoding='utf-8',na_rep='null')
-        save_to_parquet(out_df)
+        print(save_to_parquet(out_df))
 
 if __name__ == "__main__":
     get_latests()
