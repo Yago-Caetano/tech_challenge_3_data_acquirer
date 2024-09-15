@@ -1,0 +1,27 @@
+name: Run Python Project
+
+# Define os gatilhos
+on:
+  # Gatilho para execução manual
+  workflow_dispatch:
+  
+  # Gatilho para execução periódica ás 03:00
+  schedule:
+    - cron: "0 3 * * *" 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout do código do repositório
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Configura o Docker no runner
+    - name: Build Docker image
+      run: docker build -t my-python-app .
+
+    # Executa o contêiner com o script Python
+    - name: Run Python script in Docker container
+      run: docker run my-python-app
