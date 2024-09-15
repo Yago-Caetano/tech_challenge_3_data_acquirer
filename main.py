@@ -3,6 +3,8 @@ from datetime import datetime
 import json
 import requests
 import pandas as pd
+import os
+
 
 API_KEY = "5c50eb410d19ac41276bc63c1885e6c99bf7b2219977e16d9904099ba4e93835"
 
@@ -106,5 +108,8 @@ def get_latests():
         #out_df.to_csv('meu_dataset.csv', index=False, encoding='utf-8',na_rep='null')
         print(save_to_parquet(out_df))
 
+        # Obtém e imprime o diretório atual de execução
+        current_directory = os.getcwd()
+        print(f"Current working directory: {current_directory}")
 if __name__ == "__main__":
     get_latests()
