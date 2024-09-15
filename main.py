@@ -38,7 +38,7 @@ def save_to_parquet(df):
     """
     try:
         # Converte os dados para um DataFrame do pandas
-        file_name = f'{datetime.now().strftime("%d_%m_%y")}_openaq_data.parquet'
+        file_name = f'/app/output/{datetime.now().strftime("%d_%m_%y")}_openaq_data.parquet'
 
         # Salva o DataFrame em um arquivo Parquet
         df.to_parquet(file_name, engine='pyarrow')

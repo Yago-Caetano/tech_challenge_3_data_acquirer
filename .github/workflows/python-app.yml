@@ -14,17 +14,19 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Configura o Docker no runner
+    # Build da imagem Docker
     - name: Build Docker image
       run: docker build -t my-python-app .
 
-    # Executa o contêiner com o script Python que gera o arquivo Parquet
+    # Executa o contêiner e monta um volume compartilhado com o sistema de arquivos do runner
     - name: Run Python script in Docker container
-      run: docker run my-python-app
+      run: |
+        mkdir -p ./output  # Cria uma pasta local para salvar o arquivo
+        docker run -v $(pwd)/output:/app/output my-python-app
 
-    # Salva o arquivo Parquet gerado como artifact
-    - name: Upload Parquet file
+    # Upload do arquivo Parquet gerado
+    - name: Upload Parquet files
       uses: actions/upload-artifact@v3
       with:
-        name: parquet-file  # Nome do artifact
-        path: "/app/*_openaq_data*.parquet"  # Caminho do arquivo Parquet gerado
+        name: openaq-data-files
+        path: ./output/*_openaq_data*.parquet
