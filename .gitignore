@@ -1,1 +1,7 @@
 /results
+
+#ignore parquet files
+*.parquet
+
+#ignore model files
+*.pkl
