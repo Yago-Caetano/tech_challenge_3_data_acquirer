@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clusterização de Qualidade do Ar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clusterização de Qualidade do Ar</h1>
+        <p>Insira os valores de PM2.5 e PM10 para descobrir a qual grupo de localidades as suas medições pertencem.</p>
+        
+        <div class="info">
+            <h2>O que são PM2.5 e PM10?</h2>
+            <p><strong>PM2.5</strong> refere-se às partículas finas no ar com diâmetro menor que 2.5 micrômetros. Essas partículas são pequenas o suficiente para penetrar nos pulmões e causar problemas respiratórios.</p>
+            <p><strong>PM10</strong> são partículas maiores que incluem poeira e pólen, com diâmetro de até 10 micrômetros.</p>
+        </div>
+
+        <form id="airQualityForm">
+            <label for="pm25">Valor de PM2.5:</label>
+            <input type="number" id="pm25" name="pm25" required min="0" step="0.1">
+            
+            <label for="pm10">Valor de PM10:</label>
+            <input type="number" id="pm10" name="pm10" required min="0" step="0.1">
+            
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

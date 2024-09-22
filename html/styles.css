@@ -1,0 +1,110 @@
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #cce5ff; /* Cor de fundo azul claro */
+    color: #333;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px; /* Borda curva */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centralizar o conteúdo dentro do container */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ff8097; /* Título em rosa claro */
+}
+
+p {
+    font-size: 1.1em;
+    text-align: center; /* Centralizar o texto */
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para os rótulos */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ff8097; /* Cor rosa claro */
+    text-align: center;
+}
+
+/* Estilo para os campos de input */
+input[type="number"] {
+    width: 100%;
+    max-width: 300px; /* Limitar o tamanho máximo do input */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #c7c7c7;
+    border-radius: 10px; /* Borda curva nos inputs */
+    font-size: 1em;
+    color: #333;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os botões */
+button {
+    width: 100%;
+    max-width: 300px; /* Limitar o tamanho máximo do botão */
+    padding: 12px;
+    background-color: #ff8097; /* Cor do botão rosa claro */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Borda curva nos botões */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito hover nos botões */
+button:hover {
+    background-color: #ff4c5c; /* Escurecer rosa no hover */
+}
+
+/* Estilo para a seção de resultado */
+#result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.3em;
+    color: #ff8097; /* Cor rosa claro para o resultado */
+}
+
+/* Estilo adicional para a caixa de informação */
+.info {
+    padding: 15px;
+    border-radius: 15px; /* Borda curva na seção de informações */
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centralizar a caixa de informações */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    button, input[type="number"] {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
