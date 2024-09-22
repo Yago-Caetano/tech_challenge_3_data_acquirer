@@ -53,11 +53,12 @@ def save_to_parquet(df):
 def upload_file_to_s3(file_path, bucket_name, s3_key):
 
     # Configuração programática para AWS
-    aws_access_key_id = 'ASIA5BWVKG4A5JL4KUGF'
-    aws_secret_access_key = '36YjLMAwb9juui0W2WZY3lZrxA54TrwMXik8xddx'
-    aws_secret_access_token = "IQoJb3JpZ2luX2VjEGsaCXVzLXdlc3QtMiJGMEQCIGnb3I3Wa2XIWdojxXBF53z8+o0UHJ4LecLpGzOdJBVNAiB+YoVIUcxoIdpYNsZjpabLUQtw0IC2N8mtRvy6o1aHZCq8Agik//////////8BEAIaDDg5NzAyMTc4NTg1NyIMrerWb5kIxJrQVpLhKpACE/xzO099dD0oueh9YVfsjC+gcA70s20Y7XCbDU1WeIL1b8OGmBP+J1yievF2Oo+ZjAT00sRUW1BK0cPCn5VX9E95w1mpt0jaNUIB4FeIwgi7STNGsKFfgMwLIgcAhVzOzseHjfSjUpKslVOL1Yw1fA6OTwpa3hNWCjEwnXnsiQy4TL1wwhiW8TAJPeSxwS7+mG1tmG7UYqPNr9+J1W3FiIyYMs6pfpg07k1vjZoevaHDs/dfcAr8etqeyOsYsxOFsYXdAMmR+qkeBdC+auDY0CyoP+3pQCG5XCKx3ZcpjlWepDzg2XQWaxuSamU254LmvrVmz1v9abuOdJi0SsSJsv0/jwJW8DS8Yw184HMVaecwyuS/twY6ngEmSFjD1q7IVr212C8+zcA5ZPVJzH/LKfuIKSq8wvY6D7vCoHQy07dY2QJQaAR0ge29P9UNc3RMgGvb+R3savYXQTqVTs1nAemKQVTmjV3fw9XR4FZPf8kmCHlKcC/nk1fksfpbLLRh/u3b9XF5UR4Wj1YS/Fuc5Czye8r5ssycDZBRbH8mo7G67SBgqopq2fneK7CRjpc6fI5pO4nNKQ=="
-    aws_region = 'us-east-1'
 
+    aws_access_key_id = ''
+    aws_secret_access_key = ''
+    aws_secret_access_token = ""
+    aws_region = 'us-east-1'
+    
     # Inicializa o cliente S3
     s3_client = boto3.client(
         's3',
